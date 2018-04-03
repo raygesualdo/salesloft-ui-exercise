@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import { format, isBefore } from 'date-fns'
 import capitalize from 'lodash/capitalize'
 import classnames from 'classnames/bind'
