@@ -1,0 +1,47 @@
+@import '../../services/theme';
+
+.layout {
+  display: grid;
+  grid-template:
+    'header header' 4rem
+    'task actions' 3rem
+    'tags content' auto / 10rem auto;
+  @include mobile {
+    grid-template:
+      'header' 3rem
+      'tags' auto
+      'actions' auto
+      'content' 1fr / 1fr;
+  }
+}
+
+.header {
+  grid-area: header;
+  background-color: $top-background;
+}
+
+.task {
+  grid-area: task;
+  border-bottom: 1px $border-color solid;
+  @include mobile {
+    display: none;
+  }
+}
+
+.actions {
+  grid-area: actions;
+  border-bottom: 1px $border-color solid;
+  @include mobile {
+    border-bottom: 0;
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+}
+
+.tags {
+  grid-area: tags;
+}
+
+.content {
+  grid-area: content;
+}

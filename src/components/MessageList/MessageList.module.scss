@@ -1,0 +1,105 @@
+@import '../../services/theme';
+
+.table {
+  margin-right: 1rem;
+  @include mobile {
+    margin: 0;
+    margin-top: .5rem;
+  }
+}
+
+.row {
+  border-bottom: 1px $border-color solid;
+  display: grid;
+  grid-template: 'select from subject date' auto / 2.5rem 11rem 1fr min-content;
+  @include mobile {
+    grid-template:
+      'select from date' auto
+      'select subject subject' / 2.5rem 1fr min-content;
+    grid-row-gap: 0.25rem;
+    padding: 0.75rem 0;
+    &:first-child {
+      border-top: 1px $border-color solid;
+    }
+  }
+}
+
+.cell {
+  background-color: rgba(243, 243, 243, 0.85);
+  font-size: 0.85em;
+  padding: 0.75rem 0;
+  cursor: pointer;
+  background-color: #fff;
+  @include mobile {
+    padding: 0;
+  }
+}
+
+.select {
+  grid-area: select;
+  text-align: center;
+  cursor: default;
+}
+
+.from {
+  grid-area: from;
+}
+
+.subject {
+  grid-area: subject;
+  display: flex;
+  @include mobile {
+    flex-wrap: wrap;
+  }
+}
+
+.tag {
+  background-color: #ddd;
+  margin-top: -0.0625rem;
+  margin-bottom: -0.0625rem;
+  margin-right: 0.5rem;
+  padding: 0.125rem 0.5rem;
+  font-size: 0.8em;
+  text-transform: capitalize;
+  @include mobile {
+    order: 1;
+    margin: 0 0.5rem 0 0;
+  }
+}
+
+.subjectText {
+  overflow: hidden;
+  white-space: nowrap;
+  @include mobile {
+    margin-bottom: 0.25rem;
+  }
+}
+
+.preview {
+  color: #777;
+  @include mobile {
+    overflow: hidden;
+    white-space: nowrap;
+    display: block;
+    margin-bottom: 0.25rem;
+    padding-right: 0.5rem;
+  }
+}
+
+.separator {
+  @include mobile {
+    display: none;
+  }
+}
+
+.date {
+  grid-area: date;
+  text-align: right;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  white-space: nowrap;
+  @include mobile {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+}

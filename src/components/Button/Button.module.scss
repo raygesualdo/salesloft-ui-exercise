@@ -1,0 +1,35 @@
+.button {
+  cursor: default;
+  font-size: 0.6875rem;
+  font-weight: bold;
+  text-align: center;
+  white-space: nowrap;
+  margin-right: 1rem;
+  height: 1.875rem;
+  line-height: 1.875rem;
+  min-width: 4.5rem;
+  outline: 0;
+  padding: 0 .5rem;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  color: #444;
+  background-image: linear-gradient(to bottom, #f5f5f5, #f1f1f1);
+  &.icon {
+    font-size: 0.875rem;
+    font-size: 1rem;
+  }
+  &.grouped {
+    & + & {
+      margin-left: calc(-1rem - 1px);
+    }
+  }
+  &.noop {
+    cursor: not-allowed;
+  }
+}
+
+.content {
+  opacity: .8;
+  .button:hover & {
+    opacity: 1;
+  }
+}

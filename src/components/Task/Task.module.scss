@@ -1,0 +1,12 @@
+@import '../../services/theme';
+
+.text {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 0 1rem;
+  font-size: 1.2em;
+  font-weight: 500;
+  line-height: 1;
+  color: $blue;
+}

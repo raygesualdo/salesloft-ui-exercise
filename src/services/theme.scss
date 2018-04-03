@@ -1,0 +1,15 @@
+$blue: #4885ed;
+$red: #db3236;
+$yellow: #f4c20d;
+$green: #3cba54;
+
+$top-background: #f1f1f1;
+$border-color: #e7e7e7;
+
+$desktop-width: 768px;
+
+@mixin mobile {
+  @media (max-width: #{$desktop-width}) {
+    @content;
+  }
+}
